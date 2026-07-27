@@ -54,4 +54,16 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def print_multiplication_table(num):
+    """
+    Print the multiplication table for a given number from 1 to 12.
 
+    Parameters:
+    num (int): The number for which to generate the multiplication table.
+
+    Returns:
+    None
+    """
+    print(f"Multiplication Table for {num}:")
+    for i in range(1, 13):
+        print(f"{num} x {i} = {num * i}")
