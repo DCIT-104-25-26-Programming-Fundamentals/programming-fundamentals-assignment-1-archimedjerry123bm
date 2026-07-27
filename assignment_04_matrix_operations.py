@@ -59,4 +59,26 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def transpose_matrix(matrix):
+    """
+    Transpose a given M x N matrix.
+
+    Parameters:
+    matrix (list of lists): The original M x N matrix.
+
+    Returns:
+    list of lists: The transposed N x M matrix.
+    """
+    if not matrix or len(matrix) == 0:
+        return []
+
+    rows = len(matrix)
+    cols = len(matrix[0])
+    transposed = [[0] * rows for _ in range(cols)]
+
+    for i in range(rows):
+        for j in range(cols):
+            transposed[j][i] = matrix[i][j]
+
+    return transposed
 
