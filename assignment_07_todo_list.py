@@ -78,4 +78,16 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def add_task(tasks):
+    """
+    Add a new task to the to-do list.
 
+    Parameters:
+    tasks (list): The current list of tasks.
+
+    Returns:
+    None
+    """
+    task = input("Enter task: ")
+    tasks.append(task)
+    print(f'Task added: "{task}"')
