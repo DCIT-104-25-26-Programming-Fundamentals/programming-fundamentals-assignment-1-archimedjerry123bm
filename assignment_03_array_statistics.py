@@ -38,4 +38,17 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def calculate_sum(numbers):
+    """
+    Calculate the sum of a list of numbers.
 
+    Parameters:
+    numbers (list): A list of numbers.
+
+    Returns:
+    int: The sum of the numbers.
+    """
+    total = 0
+    for num in numbers:
+        total += num
+    return total
