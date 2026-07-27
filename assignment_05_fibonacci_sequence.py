@@ -48,4 +48,24 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def print_fibonacci_sequence(n):
+    """
+    Print the first n terms of the Fibonacci sequence.
 
+    Parameters:
+    n (int): The number of terms to display.
+
+    Returns:
+    None
+    """
+    if n <= 0:
+        print("Error: Number of terms must be a positive integer.")
+        return
+
+    a, b = 0, 1
+    sequence = []
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+
+    print("Fibonacci sequence:", ' '.join(map(str, sequence)))
