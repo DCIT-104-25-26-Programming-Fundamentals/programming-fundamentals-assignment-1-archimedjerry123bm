@@ -89,4 +89,51 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def add_student(students):
+    """
+    Add a new student record to the list of students.
 
+    Parameters:
+    students (list): The list of student records.
+
+    Returns:
+    None
+    """
+    name = input("Student name: ")
+    student_id = input("Student ID: ")
+
+    # Check if the ID is unique
+    for student in students:
+        if student["id"] == student_id:
+            print(f"Error: Student ID {student_id} already exists.")
+            return
+
+    try:
+        num_scores = int(input("How many scores? "))
+        if num_scores <= 0:
+            print("Error: Number of scores must be a positive integer.")
+            return
+    except ValueError:
+        print("Error: Invalid input. Please enter a positive integer for the number of scores.")
+        return
+
+    scores = []
+    for i in range(num_scores):
+        while True:
+            try:
+                score = float(input(f"Enter score {i + 1}: "))
+                if score < 0 or score > 100:
+                    print("Error: Score must be between 0 and 100.")
+                    continue
+                scores.append(score)
+                break
+            except ValueError:
+                print("Error: Invalid input. Please enter a numeric value for the score.")
+
+    student_record = {
+        "name": name,
+        "id": student_id,
+        "scores": scores
+    }
+    students.append(student_record)
+    print(f'Student "{name}" added successfully.')
