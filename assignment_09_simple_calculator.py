@@ -67,4 +67,15 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+def add(a, b):
+    """
+    Perform addition of two numbers.
 
+    Parameters:
+    a (float): The first number.
+    b (float): The second number.
+
+    Returns:
+    float: The result of a + b.
+    """
+    return a + b
